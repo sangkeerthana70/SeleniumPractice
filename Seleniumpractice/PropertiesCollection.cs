@@ -13,4 +13,13 @@ namespace Seleniumpractice
         //create reference for the browser and set it as a global variable
         public static IWebDriver driver = new ChromeDriver();
     }
+
+    enum PropertyType
+    {
+        Id,
+        Name,
+        LinkText,
+        CssName,
+        ClassName
+    }
 }

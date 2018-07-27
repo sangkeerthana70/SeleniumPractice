@@ -10,9 +10,9 @@ namespace Seleniumpractice
     class SeleniumSetMethods
     {
 
-        public static void SetTextValue(string SearchBy, string SearchValue, string Text)
+        public static void SetTextValue(PropertyType SearchBy, string SearchValue, string Text)
         {
-            if (SearchBy == "name")
+            if (SearchBy == PropertyType.Name)
             {
                 PropertiesCollection.driver.FindElement(By.Name(SearchValue)).SendKeys(Text);
             }
@@ -22,15 +22,15 @@ namespace Seleniumpractice
             }
         }
 
-        public static void DoClick (string SearchBy, string SearchValue)
+        public static void DoClick (PropertyType SearchBy, string SearchValue)
         {
-            if(SearchBy == "name")
+            if(SearchBy == PropertyType.Id)
             {
-                PropertiesCollection.driver.FindElement(By.Name(SearchValue)).Click();
+                PropertiesCollection.driver.FindElement(By.Id(SearchValue)).Click();
             }
             else
             {
-                PropertiesCollection.driver.FindElement(By.Id(SearchValue)).Click();
+                PropertiesCollection.driver.FindElement(By.Name(SearchValue)).Click();
             }
         }
     }

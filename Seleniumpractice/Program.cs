@@ -32,20 +32,20 @@ namespace Seleniumpractice
         {
             //sign in 
             //driver.FindElement(By.Id("uh-signin")).Click();
-            SeleniumSetMethods.DoClick("id", "uh-signin");
+            SeleniumSetMethods.DoClick(PropertyType.Id, "uh-signin");
             //email signin 
             PropertiesCollection.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             //driver.FindElement(By.Name("username")).SendKeys("asangeethu@yahoo.com");
-            SeleniumSetMethods.SetTextValue("name", "username", "asangeethu@yahoo.com");
+            SeleniumSetMethods.SetTextValue(PropertyType.Name, "username", "asangeethu@yahoo.com");
             //driver.FindElement(By.Id("login-signin")).Click();
-            SeleniumSetMethods.DoClick("id", "login-signin");
+            SeleniumSetMethods.DoClick(PropertyType.Id, "login-signin");
             PropertiesCollection.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             //password signin
 
             //driver.FindElement(By.Id("login-passwd")).SendKeys("@nuk1978");
-            SeleniumSetMethods.SetTextValue("id", "login-passwd", "@nuk1978");
+            SeleniumSetMethods.SetTextValue(PropertyType.Id, "login-passwd", "@nuk1978");
             //driver.FindElement(By.Id("login-signin")).Click();
-            SeleniumSetMethods.DoClick("id", "login-signin");
+            SeleniumSetMethods.DoClick(PropertyType.Id, "login-signin");
             Console.WriteLine("Executed Test1");
         }
 
